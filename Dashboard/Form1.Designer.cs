@@ -30,16 +30,17 @@ namespace Dashboard
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNav = new System.Windows.Forms.Panel();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnCalendar = new System.Windows.Forms.Button();
             this.btnAnalytics = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlNav = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +61,14 @@ namespace Dashboard
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(186, 577);
             this.panel1.TabIndex = 0;
+            // 
+            // pnlNav
+            // 
+            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
+            this.pnlNav.Location = new System.Drawing.Point(0, 192);
+            this.pnlNav.Name = "pnlNav";
+            this.pnlNav.Size = new System.Drawing.Size(3, 100);
+            this.pnlNav.TabIndex = 2;
             // 
             // btnSettings
             // 
@@ -152,14 +161,6 @@ namespace Dashboard
             this.panel2.Size = new System.Drawing.Size(186, 144);
             this.panel2.TabIndex = 0;
             // 
-            // pnlNav
-            // 
-            this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            this.pnlNav.Location = new System.Drawing.Point(0, 192);
-            this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(3, 100);
-            this.pnlNav.TabIndex = 2;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -192,12 +193,21 @@ namespace Dashboard
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(186, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(765, 577);
+            this.panel3.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -225,6 +235,7 @@ namespace Dashboard
         private System.Windows.Forms.Button btnCalendar;
         private System.Windows.Forms.Button btnAnalytics;
         private System.Windows.Forms.Panel pnlNav;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 
