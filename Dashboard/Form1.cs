@@ -47,6 +47,9 @@ namespace Dashboard
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
+
+
+            //testi
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
@@ -105,5 +108,6 @@ namespace Dashboard
         {
             btnSettings.BackColor = Color.FromArgb(9, 40, 82);
         }
+
     }
 }
