@@ -48,8 +48,9 @@ namespace Dashboard
             pnlNav.Left = btnDashboard.Left;
             btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
 
+            //Open window to childform "panel3"
+            //OpenChildForm(new RecipeUI());
 
-            //testi
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
@@ -107,6 +108,25 @@ namespace Dashboard
         private void btnSettings_Leave(object sender, EventArgs e)
         {
             btnSettings.BackColor = Color.FromArgb(9, 40, 82);
+        }
+
+        
+        private Form ActiveChildForm = null;
+
+        private void OpenChildForm(Form childForm)
+        {
+            if (ActiveChildForm != null)
+            {
+                ActiveChildForm.Close();
+            }
+            ActiveChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel3.Controls.Add(childForm);
+            panel3.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
     }
