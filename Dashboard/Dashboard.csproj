@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildForms\ChildForm_Analytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Analytics.Designer.cs">
+      <DependentUpon>ChildForm_Analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Charts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Charts.Designer.cs">
+      <DependentUpon>ChildForm_Charts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\ChildForm_Analytics.resx">
+      <DependentUpon>ChildForm_Analytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildForm_Charts.resx">
+      <DependentUpon>ChildForm_Charts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

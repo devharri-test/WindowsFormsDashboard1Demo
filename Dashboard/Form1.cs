@@ -8,27 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Dashboard.ChildForms;
 
 namespace Dashboard
 {
     public partial class Form1 : Form
     {
 
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-            (
-            int nLeftRect,
-            int nTopRect,
-            int nRightRect,
-            int nBottomRect,
-            int nWidthEllipse,
-            int nHeightEllipse
-            );
+        //[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        //private static extern IntPtr CreateRoundRectRgn
+        //    (
+        //    int nLeftRect,
+        //    int nTopRect,
+        //    int nRightRect,
+        //    int nBottomRect,
+        //    int nWidthEllipse,
+        //    int nHeightEllipse
+        //    );
 
         public Form1()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
+            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
@@ -49,7 +50,7 @@ namespace Dashboard
             btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
 
             //Open window to childform "panel3"
-            //OpenChildForm(new RecipeUI());
+            OpenChildForm(new ChildForm_Charts());
 
         }
 
@@ -59,6 +60,9 @@ namespace Dashboard
             pnlNav.Top = btnAnalytics.Top;
             pnlNav.Left = btnAnalytics.Left;
             btnAnalytics.BackColor = Color.FromArgb(0, 64, 135);
+
+            //Open window to childform "panel3"
+            OpenChildForm(new ChildForm_Analytics());
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)
