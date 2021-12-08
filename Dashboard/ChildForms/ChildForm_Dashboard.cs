@@ -1,4 +1,6 @@
 ﻿using Dashboard.Models;
+using LiveCharts;
+using LiveCharts.Wpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,11 +41,91 @@ namespace Dashboard
 
             //Add data to DataGridView here 
             List<ProductionModel> PlcData = new List<ProductionModel>();
-            PlcData.Add(new ProductionModel() { Shift = 1, Day = 1, Value = 1 });
-            PlcData.Add(new ProductionModel() { Shift = 1, Day = 2, Value = 2 });
-            PlcData.Add(new ProductionModel() { Shift = 1, Day = 3, Value = 3 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 1, Value = 40 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 2, Value = 42 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 3, Value = 46 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 4, Value = 49 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 5, Value = 48 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 6, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 7, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 8, Value = 54 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 9, Value = 53 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 10, Value = 58 });
+
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 1, Value = 40 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 2, Value = 44 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 3, Value = 48 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 4, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 5, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 6, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 7, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 8, Value = 54 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 9, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 2, Day = 10, Value = 58 });
+
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 1, Value = 45 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 2, Value = 40 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 3, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 4, Value = 58 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 5, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 6, Value = 50 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 7, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 8, Value = 54 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 9, Value = 52 });
+            PlcData.Add(new ProductionModel() { Shift = 3, Day = 10, Value = 50 });
 
             productionModelBindingSource.DataSource = PlcData;
+
+            UpdateChart();
+        }
+
+        private void UpdateChart()
+        {
+            //Initilize data
+            cartesianChart1.Series.Clear();
+            SeriesCollection series = new SeriesCollection();
+
+            var shifts = (from o in productionModelBindingSource.DataSource as List<ProductionModel>
+                          select new { Shift = o.Shift }).Distinct();
+            foreach (var shift in shifts)
+            {
+                List<double> values = new List<double>();
+                for (int day = 1; day <= 10; day++)
+                {
+                    double value = 0;
+                    var data = from o in productionModelBindingSource.DataSource as List<ProductionModel>
+                               where o.Shift.Equals(shift.Shift) && o.Day.Equals(day)
+                               orderby o.Day ascending
+                               select new { o.Value, o.Day };
+
+                    try
+                    {
+                        if (data.SingleOrDefault() != null)
+                        {
+
+                            value = data.SingleOrDefault().Value;
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Invalid input. There is more than one element with same values");
+                    }
+
+
+
+                    values.Add(value);
+
+                }
+                series.Add(new LineSeries() { Title = shift.Shift.ToString(), Values = new ChartValues<double>(values), PointGeometrySize = 5, });
+
+            }
+            cartesianChart1.Series = series;
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            UpdateChart();
         }
     }
 }

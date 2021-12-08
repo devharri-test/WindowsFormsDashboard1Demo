@@ -40,6 +40,7 @@ namespace Dashboard
             this.dayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productionModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.btnReload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productionModelBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -130,12 +131,23 @@ namespace Dashboard
             this.cartesianChart1.TabIndex = 4;
             this.cartesianChart1.Text = "cartesianChart1";
             // 
+            // btnReload
+            // 
+            this.btnReload.Location = new System.Drawing.Point(374, 348);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(75, 25);
+            this.btnReload.TabIndex = 5;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
             // ChildForm_Charts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(764, 576);
+            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.cartesianChart1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -159,5 +171,6 @@ namespace Dashboard
         private System.Windows.Forms.DataGridViewTextBoxColumn dayDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource productionModelBindingSource;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private System.Windows.Forms.Button btnReload;
     }
 }
