@@ -20,7 +20,7 @@ namespace Dashboard
 
         private void ChildForm_Charts_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = new List<ProductionModel>();
+            productionModelBindingSource.DataSource = new List<ProductionModel>();
 
             cartesianChart1.AxisX.Add(new LiveCharts.Wpf.Axis
             {
@@ -36,6 +36,14 @@ namespace Dashboard
             });
 
             cartesianChart1.LegendLocation = LiveCharts.LegendLocation.Right;
+
+            //Add data to DataGridView here 
+            List<ProductionModel> PlcData = new List<ProductionModel>();
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 1, Value = 1 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 2, Value = 2 });
+            PlcData.Add(new ProductionModel() { Shift = 1, Day = 3, Value = 3 });
+
+            productionModelBindingSource.DataSource = PlcData;
         }
     }
 }
