@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildForms\ChildForm_AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_AboutUs.Designer.cs">
+      <DependentUpon>ChildForm_AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\ChildForm_Analytics.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChildForms\ChildForm_Analytics.Designer.cs">
       <DependentUpon>ChildForm_Analytics.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\ChildForm_Charts.cs">
+    <Compile Include="ChildForms\ChildForm_Calendar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\ChildForm_Charts.Designer.cs">
-      <DependentUpon>ChildForm_Charts.cs</DependentUpon>
+    <Compile Include="ChildForms\ChildForm_Calendar.Designer.cs">
+      <DependentUpon>ChildForm_Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Dashboard.Designer.cs">
+      <DependentUpon>ChildForm_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\ChildForm_Settings.Designer.cs">
+      <DependentUpon>ChildForm_Settings.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -66,11 +84,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildForms\ChildForm_AboutUs.resx">
+      <DependentUpon>ChildForm_AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\ChildForm_Analytics.resx">
       <DependentUpon>ChildForm_Analytics.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\ChildForm_Charts.resx">
-      <DependentUpon>ChildForm_Charts.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\ChildForm_Calendar.resx">
+      <DependentUpon>ChildForm_Calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildForm_Dashboard.resx">
+      <DependentUpon>ChildForm_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\ChildForm_Settings.resx">
+      <DependentUpon>ChildForm_Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

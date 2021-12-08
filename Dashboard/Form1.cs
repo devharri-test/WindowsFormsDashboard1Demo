@@ -34,7 +34,7 @@ namespace Dashboard
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
-            btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
+            //btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -71,6 +71,9 @@ namespace Dashboard
             pnlNav.Top = btnCalendar.Top;
             pnlNav.Left = btnCalendar.Left;
             btnCalendar.BackColor = Color.FromArgb(0, 64, 135);
+
+            //Open window to childform "panel3"
+            OpenChildForm(new ChildForm_Calendar());
         }
 
         private void btnAboutUs_Click(object sender, EventArgs e)
@@ -79,6 +82,9 @@ namespace Dashboard
             pnlNav.Top = btnAboutUs.Top;
             pnlNav.Left = btnAboutUs.Left;
             btnAboutUs.BackColor = Color.FromArgb(0, 64, 135);
+
+            //Open window to childform "panel3"
+            OpenChildForm(new ChildForm_AboutUs());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
@@ -87,6 +93,9 @@ namespace Dashboard
             pnlNav.Top = btnSettings.Top;
             pnlNav.Left = btnSettings.Left;
             btnSettings.BackColor = Color.FromArgb(0, 64, 135);
+
+            //Open window to childform "panel3"
+            OpenChildForm(new ChildForm_Settings());
         }
 
         private void btnDashboard_Leave(object sender, EventArgs e)

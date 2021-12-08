@@ -97,7 +97,7 @@ namespace Dashboard
             this.btnAboutUs.Name = "btnAboutUs";
             this.btnAboutUs.Size = new System.Drawing.Size(186, 42);
             this.btnAboutUs.TabIndex = 4;
-            this.btnAboutUs.Text = "AboutUs";
+            this.btnAboutUs.Text = "About us";
             this.btnAboutUs.UseVisualStyleBackColor = true;
             this.btnAboutUs.Click += new System.EventHandler(this.btnAboutUs_Click);
             this.btnAboutUs.Leave += new System.EventHandler(this.btnAboutUs_Leave);
