@@ -142,5 +142,9 @@ namespace Dashboard
             childForm.Show();
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
