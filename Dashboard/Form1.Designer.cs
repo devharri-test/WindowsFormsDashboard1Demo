@@ -221,7 +221,7 @@ namespace Dashboard
             this.buttonEllipse1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEllipse1.ForeColor = System.Drawing.Color.Red;
-            this.buttonEllipse1.Location = new System.Drawing.Point(4, 4);
+            this.buttonEllipse1.Location = new System.Drawing.Point(6, 5);
             this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEllipse1.Name = "buttonEllipse1";
             this.buttonEllipse1.Size = new System.Drawing.Size(20, 20);
@@ -239,7 +239,7 @@ namespace Dashboard
             this.buttonEllipse2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEllipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEllipse2.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonEllipse2.Location = new System.Drawing.Point(24, 4);
+            this.buttonEllipse2.Location = new System.Drawing.Point(27, 5);
             this.buttonEllipse2.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEllipse2.Name = "buttonEllipse2";
             this.buttonEllipse2.Size = new System.Drawing.Size(20, 20);
@@ -256,7 +256,7 @@ namespace Dashboard
             this.buttonEllipse3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEllipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEllipse3.ForeColor = System.Drawing.Color.Lime;
-            this.buttonEllipse3.Location = new System.Drawing.Point(44, 4);
+            this.buttonEllipse3.Location = new System.Drawing.Point(48, 5);
             this.buttonEllipse3.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEllipse3.Name = "buttonEllipse3";
             this.buttonEllipse3.Size = new System.Drawing.Size(20, 20);
