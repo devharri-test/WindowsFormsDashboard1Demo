@@ -132,6 +132,9 @@
     <Compile Include="UserControls\ButtonEllipse.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UserControls\ButtonRound.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="ChildForms\ChildForm_AboutUs.resx">
       <DependentUpon>ChildForm_AboutUs.cs</DependentUpon>
     </EmbeddedResource>
