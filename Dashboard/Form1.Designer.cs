@@ -41,12 +41,14 @@ namespace Dashboard
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.buttonEllipse3 = new Dashboard.UserControls.ButtonEllipse();
             this.buttonEllipse1 = new Dashboard.UserControls.ButtonEllipse();
             this.buttonEllipse2 = new Dashboard.UserControls.ButtonEllipse();
-            this.buttonEllipse3 = new Dashboard.UserControls.ButtonEllipse();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -155,9 +157,6 @@ namespace Dashboard
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.buttonEllipse3);
-            this.panel2.Controls.Add(this.buttonEllipse2);
-            this.panel2.Controls.Add(this.buttonEllipse1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -204,50 +203,28 @@ namespace Dashboard
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(186, 0);
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Location = new System.Drawing.Point(186, 38);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(765, 577);
+            this.panel3.Size = new System.Drawing.Size(765, 539);
             this.panel3.TabIndex = 1;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // buttonEllipse1
+            // panel4
             // 
-            this.buttonEllipse1.BackColor = System.Drawing.Color.Red;
-            this.buttonEllipse1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEllipse1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.buttonEllipse1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse1.ForeColor = System.Drawing.Color.Red;
-            this.buttonEllipse1.Location = new System.Drawing.Point(6, 5);
-            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEllipse1.Name = "buttonEllipse1";
-            this.buttonEllipse1.Size = new System.Drawing.Size(20, 20);
-            this.buttonEllipse1.TabIndex = 0;
-            this.buttonEllipse1.UseVisualStyleBackColor = false;
-            this.buttonEllipse1.Click += new System.EventHandler(this.buttonEllipse1_Click);
-            // 
-            // buttonEllipse2
-            // 
-            this.buttonEllipse2.BackColor = System.Drawing.Color.Yellow;
-            this.buttonEllipse2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEllipse2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.buttonEllipse2.FlatAppearance.BorderSize = 0;
-            this.buttonEllipse2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
-            this.buttonEllipse2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonEllipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEllipse2.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonEllipse2.Location = new System.Drawing.Point(27, 5);
-            this.buttonEllipse2.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonEllipse2.Name = "buttonEllipse2";
-            this.buttonEllipse2.Size = new System.Drawing.Size(20, 20);
-            this.buttonEllipse2.TabIndex = 2;
-            this.buttonEllipse2.UseVisualStyleBackColor = false;
+            this.panel4.Controls.Add(this.buttonEllipse3);
+            this.panel4.Controls.Add(this.buttonEllipse1);
+            this.panel4.Controls.Add(this.buttonEllipse2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(186, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(765, 37);
+            this.panel4.TabIndex = 0;
             // 
             // buttonEllipse3
             // 
+            this.buttonEllipse3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEllipse3.BackColor = System.Drawing.Color.Lime;
             this.buttonEllipse3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonEllipse3.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
@@ -256,12 +233,51 @@ namespace Dashboard
             this.buttonEllipse3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.buttonEllipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEllipse3.ForeColor = System.Drawing.Color.Lime;
-            this.buttonEllipse3.Location = new System.Drawing.Point(48, 5);
+            this.buttonEllipse3.Location = new System.Drawing.Point(699, 9);
             this.buttonEllipse3.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEllipse3.Name = "buttonEllipse3";
-            this.buttonEllipse3.Size = new System.Drawing.Size(20, 20);
+            this.buttonEllipse3.Size = new System.Drawing.Size(19, 19);
             this.buttonEllipse3.TabIndex = 3;
             this.buttonEllipse3.UseVisualStyleBackColor = false;
+            this.buttonEllipse3.Click += new System.EventHandler(this.buttonEllipse3_Click);
+            // 
+            // buttonEllipse1
+            // 
+            this.buttonEllipse1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEllipse1.BackColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEllipse1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse1.ForeColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.Location = new System.Drawing.Point(737, 9);
+            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse1.Name = "buttonEllipse1";
+            this.buttonEllipse1.Size = new System.Drawing.Size(19, 19);
+            this.buttonEllipse1.TabIndex = 0;
+            this.buttonEllipse1.UseVisualStyleBackColor = false;
+            this.buttonEllipse1.Click += new System.EventHandler(this.buttonEllipse1_Click);
+            // 
+            // buttonEllipse2
+            // 
+            this.buttonEllipse2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEllipse2.BackColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEllipse2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonEllipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse2.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.Location = new System.Drawing.Point(718, 9);
+            this.buttonEllipse2.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse2.Name = "buttonEllipse2";
+            this.buttonEllipse2.Size = new System.Drawing.Size(19, 19);
+            this.buttonEllipse2.TabIndex = 2;
+            this.buttonEllipse2.UseVisualStyleBackColor = false;
+            this.buttonEllipse2.Click += new System.EventHandler(this.buttonEllipse2_Click);
             // 
             // Form1
             // 
@@ -269,6 +285,7 @@ namespace Dashboard
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(951, 577);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -281,6 +298,7 @@ namespace Dashboard
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -302,6 +320,7 @@ namespace Dashboard
         private UserControls.ButtonEllipse buttonEllipse1;
         private UserControls.ButtonEllipse buttonEllipse2;
         private UserControls.ButtonEllipse buttonEllipse3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 

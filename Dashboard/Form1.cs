@@ -18,29 +18,14 @@ namespace Dashboard
         private Point _offset;
         private Point _start_point = new Point(0,0);
 
-
-        //[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        //private static extern IntPtr CreateRoundRectRgn
-        //    (
-        //    int nLeftRect,
-        //    int nTopRect,
-        //    int nRightRect,
-        //    int nBottomRect,
-        //    int nWidthEllipse,
-        //    int nHeightEllipse
-        //    );
-
         public Form1()
         {
             InitializeComponent();
-            //Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
 
+            //Left menu, left indicator size init
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
-
-            
-            //btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -148,16 +133,6 @@ namespace Dashboard
             childForm.Show();
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonEllipse1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -181,6 +156,23 @@ namespace Dashboard
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             _dragging = false;
+        }
+
+        private void buttonEllipse3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonEllipse2_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
         }
     }
 }
