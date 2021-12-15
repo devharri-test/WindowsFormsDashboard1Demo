@@ -14,6 +14,10 @@ namespace Dashboard
 {
     public partial class Form1 : Form
     {
+        private bool _dragging = false;
+        private Point _offset;
+        private Point _start_point = new Point(0,0);
+
 
         //[DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         //private static extern IntPtr CreateRoundRectRgn
@@ -34,6 +38,8 @@ namespace Dashboard
             pnlNav.Height = btnDashboard.Height;
             pnlNav.Top = btnDashboard.Top;
             pnlNav.Left = btnDashboard.Left;
+
+            
             //btnDashboard.BackColor = Color.FromArgb(0, 64, 135);
         }
 
@@ -145,6 +151,36 @@ namespace Dashboard
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonEllipse1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _dragging = true;
+            _start_point = new Point(e.X, e.Y);
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (_dragging == true)
+            {
+                Point p = PointToScreen(e.Location);
+                Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+            }
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            _dragging = false;
         }
     }
 }

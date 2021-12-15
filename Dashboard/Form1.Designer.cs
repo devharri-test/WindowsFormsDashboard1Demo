@@ -41,6 +41,9 @@ namespace Dashboard
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonEllipse1 = new Dashboard.UserControls.ButtonEllipse();
+            this.buttonEllipse2 = new Dashboard.UserControls.ButtonEllipse();
+            this.buttonEllipse3 = new Dashboard.UserControls.ButtonEllipse();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -152,6 +155,9 @@ namespace Dashboard
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.buttonEllipse3);
+            this.panel2.Controls.Add(this.buttonEllipse2);
+            this.panel2.Controls.Add(this.buttonEllipse1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -160,13 +166,16 @@ namespace Dashboard
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 144);
             this.panel2.TabIndex = 0;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            this.panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseUp);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(36, 114);
+            this.label2.Location = new System.Drawing.Point(36, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 13);
             this.label2.TabIndex = 1;
@@ -177,7 +186,7 @@ namespace Dashboard
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(138)))), ((int)(((byte)(193)))));
-            this.label1.Location = new System.Drawing.Point(54, 92);
+            this.label1.Location = new System.Drawing.Point(54, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 17);
             this.label1.TabIndex = 1;
@@ -186,7 +195,7 @@ namespace Dashboard
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Dashboard.Properties.Resources.Yksivärinen_neliö_Valkoinen;
-            this.pictureBox1.Location = new System.Drawing.Point(60, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 25);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,6 +210,58 @@ namespace Dashboard
             this.panel3.Size = new System.Drawing.Size(765, 577);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // buttonEllipse1
+            // 
+            this.buttonEllipse1.BackColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEllipse1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.buttonEllipse1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse1.ForeColor = System.Drawing.Color.Red;
+            this.buttonEllipse1.Location = new System.Drawing.Point(4, 4);
+            this.buttonEllipse1.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse1.Name = "buttonEllipse1";
+            this.buttonEllipse1.Size = new System.Drawing.Size(20, 20);
+            this.buttonEllipse1.TabIndex = 0;
+            this.buttonEllipse1.UseVisualStyleBackColor = false;
+            this.buttonEllipse1.Click += new System.EventHandler(this.buttonEllipse1_Click);
+            // 
+            // buttonEllipse2
+            // 
+            this.buttonEllipse2.BackColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEllipse2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonEllipse2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse2.ForeColor = System.Drawing.Color.Yellow;
+            this.buttonEllipse2.Location = new System.Drawing.Point(24, 4);
+            this.buttonEllipse2.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse2.Name = "buttonEllipse2";
+            this.buttonEllipse2.Size = new System.Drawing.Size(20, 20);
+            this.buttonEllipse2.TabIndex = 2;
+            this.buttonEllipse2.UseVisualStyleBackColor = false;
+            // 
+            // buttonEllipse3
+            // 
+            this.buttonEllipse3.BackColor = System.Drawing.Color.Lime;
+            this.buttonEllipse3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEllipse3.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.buttonEllipse3.FlatAppearance.BorderSize = 0;
+            this.buttonEllipse3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Lime;
+            this.buttonEllipse3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonEllipse3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEllipse3.ForeColor = System.Drawing.Color.Lime;
+            this.buttonEllipse3.Location = new System.Drawing.Point(44, 4);
+            this.buttonEllipse3.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonEllipse3.Name = "buttonEllipse3";
+            this.buttonEllipse3.Size = new System.Drawing.Size(20, 20);
+            this.buttonEllipse3.TabIndex = 3;
+            this.buttonEllipse3.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -238,6 +299,9 @@ namespace Dashboard
         private System.Windows.Forms.Button btnAnalytics;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Panel panel3;
+        private UserControls.ButtonEllipse buttonEllipse1;
+        private UserControls.ButtonEllipse buttonEllipse2;
+        private UserControls.ButtonEllipse buttonEllipse3;
     }
 }
 

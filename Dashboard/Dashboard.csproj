@@ -129,6 +129,9 @@
     <Compile Include="Models\ProductionModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\ButtonEllipse.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="ChildForms\ChildForm_AboutUs.resx">
       <DependentUpon>ChildForm_AboutUs.cs</DependentUpon>
     </EmbeddedResource>
